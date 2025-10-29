@@ -1,0 +1,424 @@
+/* ==============================
+   GLOBAL RESET & BASE STYLES
+   ============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  background-color: #0a0a0a;
+  overflow-x: hidden;
+}
+
+/* ==============================
+   HEADER & NAVBAR
+   ============================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  width: 120px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f8f9fa;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffcc70;
+  transform: scale(1.05);
+}
+
+/* ==============================
+   SECTION 1: HERO / HOME
+   ============================== */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  background: url("https://i.ibb.co/Kx9YN32v/Web-images-1.jpg") no-repeat center center/cover;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+.hero * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #ffe4a3;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 20px 0;
+  line-height: 1.3;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #e8e8e8;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.buttons .btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 50px;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.btn.primary {
+  background: #ffcc70;
+  color: #1a1a1a;
+}
+
+.btn.primary:hover {
+  background: #ffd98e;
+  transform: translateY(-3px);
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #ffcc70;
+  color: #ffcc70;
+}
+
+.btn.secondary:hover {
+  background: #ffcc70;
+  color: #1a1a1a;
+  transform: translateY(-3px);
+}
+
+/* ==============================
+   SECTION 2: ABOUT
+   ============================== */
+.about {
+  text-align: center;
+  padding: 100px 20px;
+  margin: 80px auto;
+  position: relative;
+  background: url("https://i.ibb.co/B2qYRWNg/Web-images-1.jpg") no-repeat center center/cover;
+  color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay for text readability */
+  z-index: 0;
+}
+
+.about * {
+  position: relative;
+  z-index: 1;
+}
+
+.about h2 {
+  font-size: 2.6rem;
+  color: #ffcc70;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #f3f3f3;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+/* ==============================
+   SECTION 3: QUIZ
+   ============================== */
+.quiz {
+  padding: 100px 20px;
+  text-align: center;
+  margin: 80px auto;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  max-width: 950px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.quiz h2 {
+  font-size: 2.3rem;
+  color: #ffcc70;
+  margin-bottom: 40px;
+}
+
+.question {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 700px;
+  text-align: left;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.question:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+label {
+  display: block;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+label:hover {
+  color: #ffcc70;
+}
+
+/* ==============================
+   SUBMIT BUTTON (ENHANCED)
+   ============================== */
+button.submit-btn {
+  display: block;
+  margin: 40px auto 0;
+  padding: 18px 45px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  background: linear-gradient(90deg, #ffcc70, #ffb347);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+button.submit-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  background: linear-gradient(90deg, #ffd98e, #ffc973);
+  box-shadow: 0 8px 25px rgba(255, 204, 112, 0.5);
+}
+
+/* ==============================
+   SECTION 4: RESULTS
+   ============================== */
+.results {
+  padding: 80px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 80px auto;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.results h2 {
+  font-size: 2rem;
+  color: #ffcc70;
+  margin-bottom: 20px;
+}
+
+/* ==============================
+   SECTION 5: REVIEW ANSWERS
+============================== */
+.review {
+  padding: 100px 20px;
+  background: #0b0b0b;
+  text-align: center;
+  color: #fff;
+}
+
+.review h2 {
+  color: #ffcc70;
+  margin-bottom: 30px;
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(255, 204, 112, 0.6);
+}
+
+#reviewAnswers {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Each reviewed question block */
+.review-question {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 10px rgba(255, 204, 112, 0.2);
+}
+
+/* Question title */
+.review-question h4 {
+  color: #ffcc70;
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Option styling */
+.review-option {
+  display: block;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 14px 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  color: #f1f1f1;
+  font-size: 1.05rem;
+}
+
+/* Neutral hover for better interactivity */
+.review-option:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ✅ Correct answer — always shown green */
+.review-option.correct {
+  background: rgba(0, 255, 0, 0.18);
+  border-left: 4px solid #00ff00;
+  color: #baffba;
+  font-weight: 600;
+}
+
+/* ❌ Wrong answer — highlight user’s incorrect selection in red */
+.review-option.wrong {
+  background: rgba(255, 0, 0, 0.18);
+  border-left: 4px solid #ff4d4d;
+  color: #ffb6b6;
+  font-weight: 600;
+}
+
+/* Add subtle animation to highlights */
+.review-option.correct,
+.review-option.wrong {
+  animation: fadeInHighlight 0.8s ease;
+}
+
+@keyframes fadeInHighlight {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ==============================
+   SECTION 6: FOOTER
+   ============================== */
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  color: #f5f5f5;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 80px;
+}
+
+footer h3 {
+  color: #ffcc70;
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .about,
+  .quiz,
+  .results,
+  .review {
+    padding: 60px 15px;
+    margin: 50px 10px;
+  }
+
+  button.submit-btn {
+    width: 80%;
+  }
+}

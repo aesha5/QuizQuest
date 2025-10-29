@@ -1,0 +1,21 @@
+# Render manifest — creates a Web Service and a Managed Postgres (v17)
+services:
+  - type: web
+    name: QuizQuest Web
+    env: node
+    plan: free
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    healthCheckIntervalSeconds: 15
+
+databases:
+  - name: quizquest-db
+    engine: postgresql
+    version: "17"
+    plan: free
+    disk: 10
+
+# When you connect this repository in Render, the managed database's connection
+# string will be available as DATABASE_URL; the server reads that env var.

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuizQuest | Discover India's History</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- =========================
+       HEADER & NAVBAR
+  ============================== -->
+  <header>
+    
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#review">Review</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ 
+  
+   <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h4 class="tagline">Unearth the Past with <span>QuizQuest</span></h4>
+      <h1 class="main-title">The Grand Indian<br>History Challenge</h1>
+      <p class="subtitle">
+        Dive deep into 5,000 years of civilization! Test your knowledge on empires, 
+        revolutions, and monumental moments with our 5-question interactive challenge.
+      </p>
+      <div class="buttons">
+        <a href="#quiz" class="btn primary">Start Your Quest Now</a>
+        <a href="javascript:void(0)" id="exploreBtn" class="btn secondary">Explore Resources</a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       SECTION 2: ABOUT
+  ============================== -->
+  <section id="about" class="about">
+    <h2>About QuizQuest</h2>
+    <p>
+      QuizQuest is your ultimate stop to challenge and expand your understanding of India’s rich and diverse history. 
+      
+      From the ancient Indus Valley Civilization to India’s struggle for independence, 
+           
+      this quiz brings history to life with engaging questions and instant feedback. 
+      
+      Discover, learn, and compete — all in one place.
+    </p>
+  </section>
+
+  <!-- =========================
+       SECTION 3: QUIZ
+  ============================== -->
+  <section id="quiz" class="quiz">
+    <h2>India's History Quiz</h2>
+
+    <form id="quizForm">
+      <div class="question">
+        <h3>1. Who was the first Emperor of the Maurya Dynasty?</h3>
+        <label><input type="radio" name="q1" value="Ashoka" /> Ashoka</label>
+        <label><input type="radio" name="q1" value="Chandragupta Maurya" /> Chandragupta Maurya</label>
+        <label><input type="radio" name="q1" value="Bindusara" /> Bindusara</label>
+        <label><input type="radio" name="q1" value="Harsha" /> Harsha</label>
+      </div>
+
+      <div class="question">
+        <h3>2. When did India gain independence from British rule?</h3>
+        <label><input type="radio" name="q2" value="1945" /> 1945</label>
+        <label><input type="radio" name="q2" value="1946" /> 1946</label>
+        <label><input type="radio" name="q2" value="1947" /> 1947</label>
+        <label><input type="radio" name="q2" value="1948" /> 1948</label>
+      </div>
+
+      <div class="question">
+        <h3>3. The famous university of Nalanda was located in which present-day state?</h3>
+        <label><input type="radio" name="q3" value="Uttar Pradesh" /> Uttar Pradesh</label>
+        <label><input type="radio" name="q3" value="Bihar" /> Bihar</label>
+        <label><input type="radio" name="q3" value="Odisha" /> Odisha</label>
+        <label><input type="radio" name="q3" value="Madhya Pradesh" /> Madhya Pradesh</label>
+      </div>
+
+      <div class="question">
+        <h3>4. Who was the leader of the 1857 revolt in Delhi?</h3>
+        <label><input type="radio" name="q4" value="Bahadur Shah Zafar" /> Bahadur Shah Zafar</label>
+        <label><input type="radio" name="q4" value="Rani Lakshmi Bai" /> Rani Lakshmi Bai</label>
+        <label><input type="radio" name="q4" value="Mangal Pandey" /> Mangal Pandey</label>
+        <label><input type="radio" name="q4" value="Tantia Tope" /> Tantia Tope</label>
+      </div>
+
+      <div class="question">
+        <h3>5. The Dandi March was part of which major movement?</h3>
+        <label><input type="radio" name="q5" value="Non-Cooperation Movement" /> Non-Cooperation Movement</label>
+        <label><input type="radio" name="q5" value="Civil Disobedience Movement" /> Civil Disobedience Movement</label>
+        <label><input type="radio" name="q5" value="Quit India Movement" /> Quit India Movement</label>
+        <label><input type="radio" name="q5" value="Swadeshi Movement" /> Swadeshi Movement</label>
+      </div>
+
+      <button type="button" class="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+    </form>
+  </section>
+
+  <!-- =========================
+       SECTION 4: RESULTS
+  ============================== -->
+  <section id="results" class="results">
+    <h2>Your Quiz Results</h2>
+    <p id="score">You haven't taken the quiz yet.</p>
+  </section>
+
+  <!-- =========================
+       SECTION 5: REVIEW ANSWERS
+  ============================== -->
+  <section id="review" class="review">
+    <h2>Review Your Answers</h2>
+    <div id="reviewAnswers">
+      <p>Take the quiz to review your answers here.</p>
+    </div>
+  </section>
+
+  <!-- =========================
+       SECTION 6: CONTACT / FOOTER
+  ============================== -->
+  <footer id="contact">
+    <h3>Contact Us</h3>
+    <p>Email: contact@quizquest.in</p>
+    <p>Follow us on <a href="#" style="color:#ffcc70;">Instagram</a> & <a href="#" style="color:#ffcc70;">Twitter</a></p>
+    <p>&copy; 2025 QuizQuest. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
